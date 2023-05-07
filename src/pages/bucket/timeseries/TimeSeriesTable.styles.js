@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {AiOutlineRight, BsPlusSquare} from "react-icons/all";
+import {TableCell, TableRow} from "@material-ui/core";
 
 
 export const InfoBlock = styled.div`
@@ -12,12 +13,6 @@ export const InfoBlock = styled.div`
   background: #FFFFFF;
   border: 1px solid #3F88C5;
   border-radius: 10px;
-`
-
-export const NewBlock = styled(BsPlusSquare)`
-  width: 75px;
-  height: 75px;
-  color: rgba(52,49,76,0.75);
 `
 
 export const TitleAndDescriptionBox = styled.div`
@@ -56,80 +51,10 @@ export const Description = styled.h3`
 `;
 
 export const Line = styled.div`
-  width: 1250px;
+  width: 228px;
   height: 0px;
 
   border: 1px solid #3F88C5;
-`
-
-export const ButtonBucket = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  width: 240px;
-  height: 50px;
-  
-  margin: 20px 30px;
-
-  background: #3F88C5;
-  border-radius: 15px;
-
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-
-  color: #FFFFFF;
-
-  &:hover {
-    background-color: #C0D4EC;
-    cursor: pointer;
-  }
-  
-  > svg {
-    margin-right: 10px;
-  }
-`
-
-export const BucketInfoBox = styled.div`
-  max-width: 220px;
-  max-height: 243px;
-  
-  padding: 20px 20px;
-
-  margin: 20px 30px;
-
-  background: #E8E8E8;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 3px 4px rgba(0, 0, 0, 0.04), 0px 1px 8px rgba(0, 0, 0, 0.04);
-  border-radius: 15px;
-  
-  > h2 {
-    width: 200px;
-    margin: 0;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    text-align: center;
-
-    color: #000000;
-  }
-
-  > h3 {
-    width: 200px;
-    margin: 20px 0 0 0 ;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-
-    color: #000000;
-  }
 `
 
 export const Stats = styled.div`
@@ -263,75 +188,15 @@ export const DropdownIcon = styled(AiOutlineRight)`
 `;
 
 export const LargePlot = styled.div`
-  width: 1320px;
-  height: 860px;
-
   background-color: white;
   border-radius: 8px;
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   
-  overflow-y: auto;
-
-  /* Стилизуем полосу прокрутки */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  /* Стилизуем бегунок полосы прокрутки */
-  ::-webkit-scrollbar-thumb {
-    background: #5FA8D3;
-    border-radius: 5px;
-  }
-
-  /* Стилизуем фон полосы прокрутки */
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-`
-export const LargeTable = styled.table`
-  width: 1310px;
-  min-height: 110px;
-`
-
-export const TBodyLargeTable = styled.tbody`
-  position: relative;
-  width: 1310px;
-  height: 200px;
-`
-
-export const RowDiv1 = styled.div`
-  height: 110px;
-  width: 1280px;
-  
-  margin: 10px;
-  
-  background: #E8E8E8;
-  border-radius: 8px;
-`
-export const RowDiv2 = styled.div`
-  height: 25px;
-  width: 1280px;
-  
-  margin: 10px;
-`
-
-export const TableRowBucket = styled.tr`
-`;
-
-export const TableRowLine = styled.tr`
-`;
-
-export const TableCell = styled.td`
-  padding: 10px;
-`;
-
-export const InlineButton = styled.div`
-  display: inline-block;
+  width: 100%;
 `
 
 export const Button = styled.button`
-  display: flex;
   align-items: center;
   justify-content: center;
   
@@ -341,7 +206,7 @@ export const Button = styled.button`
 
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: ${(props) => props.color === "white" ? "400": "700"};;
+  font-weight: 400;
   font-size: 20px;
   line-height: 23px;
   text-align: center;
@@ -353,8 +218,25 @@ export const Button = styled.button`
   background-color: ${(props) => props.color};
   color: ${(props) => props.color === "white" ? "black": "white"};;
   
-  > svg {
-    margin-right: 5px;
+  > span {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    > svg {
+      margin-right: 5px;
+    }
   }
 `;
 
+export const TableRowBorder = styled(TableRow)`
+  background: #FFFFFF;
+  border: 1px solid #3F88C5;
+  border-radius: 15px;
+
+  box-sizing: border-box;
+`
+
+export const TableCellBorder = styled(TableCell)`
+  border-bottom: 0px;
+`
